@@ -1,5 +1,5 @@
 # Differentiable Short-Term Model (DSTM)
-This repository holds code for [Discrete Short-Term Models (**ADD-LINK**)](https://github.com/muthissar/DSTM/edit/master/README.md):
+This repository holds code for [Discrete Short-Term Models](https://doi.org/10.5334/tismir.123):
 > ## Abstract 
 > As pieces of music are usually highly self-similar, online-learning short-term models
 are well-suited for musical sequence prediction tasks. Due to their simplicity and
@@ -52,7 +52,7 @@ To speed up training using GPU acceleration consider adding `` --accelerator=gpu
 When experiencing memory issues, try lowering the batch size (e.g., `--batch_size=4`).
 
 ### Evaluation
-Evaluation is on by default but can be switched off by using `--skip_test`. We provide two pretrained models, `out/session/model/ccstm.ckpt` and `out/session/model/dcstm.ckpt`. These can be evaluated by:  
+Evaluation is on by default but can be switched off by using `--skip_test`. We provide two pretrained models: `out/session/model/ccstm.ckpt` and `out/session/model/dcstm.ckpt`. These are downloaded from the CDN on first run. The performance of the checkpoints can be evaluated by:  
 ``
 python dstm.py --batch_size=16 --skip_train --checkpoint="out/session/model/ccstm.ckpt" --encoder_output_dim=512 --no_log dstm 
 ``
